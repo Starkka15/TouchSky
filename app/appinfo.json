@@ -8,5 +8,6 @@
 	"icon": "images/icon.png",
 	"splashicon": "images/icon-256x256.png",
 	"uiRevision": 2,
-	"keywords": ["TouchSky", "Bluesky", "bsky", "AT Protocol", "social"]
+	"keywords": ["TouchSky", "Bluesky", "bsky", "AT Protocol", "social"],
+	"changeLog": "0.1.0:\n• First release — a full Bluesky client for the HP TouchPad.\n• Home timeline; post, reply, like, repost; long-press a picture to save it.\n• Threads (ancestors + nested replies), profiles, follow/unfollow.\n• Explore / Search for posts and people.\n• Notifications, Feeds, Lists, Saved posts, and direct messages.\n• Video playback (Bluesky HLS) through an on-device relay.\n• Images and emoji rendered on-device.\n• YouTube links open in the MeTube app; other links open in the browser (Atlas if installed)."
 }
