@@ -67,3 +67,6 @@ Or install the `.ipk` from the Releases page with Preware or `palm-install`.
 ## Credits & license
 
 Built for the webOS community on the HP TouchPad. Not affiliated with Bluesky.
+
+Copyright © 2026 Starkka15. Licensed under the **GNU General Public License v3.0**
+— see [LICENSE](LICENSE).
