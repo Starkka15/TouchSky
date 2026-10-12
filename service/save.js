@@ -17,7 +17,7 @@ if (typeof require === "undefined") {
 var child_process = require("child_process");
 var fs = require("fs");
 
-var FOLDER = "/media/internal/Bluesky";
+var FOLDER = "/media/internal/TouchSky";
 var CURL = "/usr/bin/curl";
 var AGENT = "Bluesky-webOS/0.1";
 

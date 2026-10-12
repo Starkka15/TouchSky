@@ -7,18 +7,18 @@ $build = Join-Path $root "build"
 New-Item -ItemType Directory -Force $build | Out-Null
 Push-Location $build
 # An old package must never be installed in place of one that failed to build.
-Remove-Item "com.stark.bluesky_*_all.ipk" -ErrorAction SilentlyContinue
+Remove-Item "com.stark.touchsky_*_all.ipk" -ErrorAction SilentlyContinue
 # App, save service and package description go into one .ipk.
 cmd /c "palm-package.bat `"$root\app`" `"$root\service`" `"$root\package`" 2>&1" | Select-Object -Last 1
-$ipk = Get-ChildItem "com.stark.bluesky_*_all.ipk" | Sort-Object LastWriteTime | Select-Object -Last 1
+$ipk = Get-ChildItem "com.stark.touchsky_*_all.ipk" | Sort-Object LastWriteTime | Select-Object -Last 1
 if (-not $ipk) {
     Pop-Location
     Write-Output "RESULT: FAILED (no package was built)"
     exit 1
 }
 cmd /c "palm-install.bat -d usb $($ipk.Name) 2>&1" | Select-Object -Last 1
-cmd /c "palm-launch.bat -d usb com.stark.bluesky 2>&1" | Select-Object -Last 1
+cmd /c "palm-launch.bat -d usb com.stark.touchsky 2>&1" | Select-Object -Last 1
 # Installing does not restart a running service; stop it so the new code is used.
 . (Join-Path $PSScriptRoot "tp-tools.ps1")
-Invoke-Tp 'for p in $(ps aux | grep "com.stark.bluesky.service" | grep -v grep | awk "{print \$2}"); do kill $p; done; sync' | Out-Null
+Invoke-Tp 'for p in $(ps aux | grep "com.stark.touchsky.service" | grep -v grep | awk "{print \$2}"); do kill $p; done; sync' | Out-Null
 Pop-Location

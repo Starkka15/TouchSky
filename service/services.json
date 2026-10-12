@@ -1,11 +1,11 @@
 {
-	"id": "com.stark.bluesky.service",
-	"description": "Saves pictures and relays video for the Bluesky app",
+	"id": "com.stark.touchsky.service",
+	"description": "Saves pictures and relays video for the TouchSky app",
 	"engine": "node",
 	"activityTimeout": 120,
 	"services": [
 		{
-			"name": "com.stark.bluesky.service",
+			"name": "com.stark.touchsky.service",
 			"globalized": false,
 			"commands": [
 				{ "name": "save", "assistant": "saveAssistant", "public": true },

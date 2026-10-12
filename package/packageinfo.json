@@ -1,9 +1,9 @@
 {
-	"app": "com.stark.bluesky",
-	"id": "com.stark.bluesky",
+	"app": "com.stark.touchsky",
+	"id": "com.stark.touchsky",
 	"loc_name": "TouchSky",
 	"package_format_version": 2,
-	"services": ["com.stark.bluesky.service"],
+	"services": ["com.stark.touchsky.service"],
 	"vendor": "stark",
 	"version": "0.1.0"
 }

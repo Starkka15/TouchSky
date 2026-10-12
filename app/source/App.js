@@ -21,11 +21,11 @@ enyo.kind({
 	className: "bs-app",
 	components: [
 		{kind: "ApplicationEvents", onBack: "backGesture"},
-		{name: "saveSvc", kind: "PalmService", service: "palm://com.stark.bluesky.service/",
+		{name: "saveSvc", kind: "PalmService", service: "palm://com.stark.touchsky.service/",
 			method: "save", onResponse: "saved"},
-		{name: "videoSvc", kind: "PalmService", service: "palm://com.stark.bluesky.service/",
+		{name: "videoSvc", kind: "PalmService", service: "palm://com.stark.touchsky.service/",
 			method: "video", onResponse: "videoReady"},
-		{name: "pingSvc", kind: "PalmService", service: "palm://com.stark.bluesky.service/", method: "ping"},
+		{name: "pingSvc", kind: "PalmService", service: "palm://com.stark.touchsky.service/", method: "ping"},
 		{name: "appMgr", kind: "PalmService", service: "palm://com.palm.applicationManager/", method: "launch"},
 		{name: "atlasSvc", kind: "PalmService", service: "palm://com.palm.applicationManager/",
 			method: "launch", onResponse: "atlasResult"},
@@ -195,7 +195,7 @@ enyo.kind({
 			this.$.content.selectViewByName("settings");
 		} else {
 			var label = section.charAt(0).toUpperCase() + section.substring(1);
-			this.$.phNote.setContent(label + " isn't built yet — coming soon.");
+			this.$.phNote.setContent(label + " isn't built yet â€” coming soon.");
 			this.$.content.selectViewByName("placeholder");
 		}
 	},
@@ -220,7 +220,7 @@ enyo.kind({
 		this.cursor = "";
 		this.more = true;
 		this.loading = true;
-		this.$.feed.showNote("Loading…");
+		this.$.feed.showNote("Loadingâ€¦");
 		BS.Api.timeline("", function(error, data) {
 			if (turn !== self.turn) { return; }
 			self.loading = false;
@@ -297,7 +297,7 @@ enyo.kind({
 	saveImage: function(inSender, info) {
 		info = info || {};
 		if (!info.url) { return; }
-		BS.banner("Saving…");
+		BS.banner("Savingâ€¦");
 		this.$.saveSvc.call({url: info.url, name: info.name || "bluesky.jpg"});
 	},
 
@@ -314,7 +314,7 @@ enyo.kind({
 
 	playVideo: function(url) {
 		BS.log("playVideo " + url);
-		BS.banner("Loading video…");
+		BS.banner("Loading videoâ€¦");
 		this.$.videoSvc.call({url: url});
 	},
 
@@ -349,7 +349,7 @@ enyo.kind({
 		if (!url) { return; }
 		if (BS.youtubeUrl(url)) {
 			this.$.appMgr.call({id: "com.jonandnic.metube", params: {target: url}});
-			BS.banner("Opening in MeTube…");
+			BS.banner("Opening in MeTubeâ€¦");
 			return;
 		}
 		this.pendingLink = url;
