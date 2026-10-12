@@ -1,0 +1,502 @@
+/* Bluesky for the TouchPad. A light, readable theme; nothing transformed or
+	stacked inside the scroller (that framebuffer path hangs this GPU). */
+
+.bs-app {
+	background: #f0f3f8;
+	font-family: Prelude, Helvetica, Arial, sans-serif;
+	color: #1a1a2e;
+	height: 100%;
+}
+
+/* ---- left rail ---- */
+
+.bs-rail {
+	width: 210px;
+	background: #15202b;
+	padding: 16px 12px;
+	box-shadow: 1px 0 3px rgba(0,0,0,0.3);
+}
+.bs-rail-avatar {
+	width: 56px;
+	height: 56px;
+	border-radius: 28px;
+	margin: 0 0 20px 8px;
+	background-color: #2b3b4a;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bs-rail-item {
+	color: #e7ecf2;
+	font-size: 20px;
+	padding: 11px 12px;
+	border-radius: 10px;
+	margin-bottom: 2px;
+}
+.bs-rail-item.bs-rail-on {
+	font-weight: bold;
+	background: #22303c;
+}
+.bs-rail-new {
+	margin-top: 10px;
+}
+
+/* content area background */
+.bs-app .enyo-pane {
+	background: #f0f3f8;
+}
+
+/* placeholders and settings */
+.bs-placeholder {
+	height: 100%;
+	background: #f0f3f8;
+}
+.bs-placeholder-note {
+	color: #667;
+	font-size: 19px;
+}
+.bs-settings {
+	background: #f0f3f8;
+	height: 100%;
+	padding: 24px;
+}
+.bs-settings-title {
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+.bs-settings-who {
+	color: #445;
+	font-size: 16px;
+	margin-bottom: 24px;
+}
+.bs-settings-btn {
+	max-width: 200px;
+}
+
+/* ---- feed ---- */
+
+.bs-feed {
+	height: 100%;
+}
+.bs-feed-note {
+	padding: 24px;
+	text-align: center;
+	color: #667;
+	font-size: 18px;
+}
+
+.bs-post {
+	background: #fff;
+	border-bottom: 1px solid #dde3ec;
+	padding: 12px 14px;
+}
+.bs-post-reason {
+	color: #667;
+	font-size: 13px;
+	margin: 0 0 6px 52px;
+}
+.bs-post-focused {
+	background: #eef4ff;
+	border-left: 3px solid #0a7aff;
+}
+.bs-post-focused .bs-post-text {
+	font-size: 18px;
+	line-height: 24px;
+}
+.bs-post-avatar {
+	width: 42px;
+	height: 42px;
+	border-radius: 21px;
+	margin-right: 10px;
+	background-color: #ccd3dd;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.bs-post-head {
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 2px;
+}
+.bs-name {
+	font-weight: bold;
+	color: #11131a;
+}
+.bs-handle {
+	color: #667;
+	margin-left: 5px;
+}
+.bs-time {
+	color: #99a;
+	margin-left: 5px;
+}
+.bs-post-text {
+	font-size: 16px;
+	line-height: 22px;
+	white-space: normal;
+	word-wrap: break-word;
+}
+.bs-emoji {
+	height: 1.15em;
+	width: 1.15em;
+	vertical-align: -0.2em;
+	margin: 0 1px;
+}
+
+/* pictures and cards */
+.bs-post-media {
+	margin-top: 8px;
+}
+.bs-img {
+	width: 440px;
+	max-width: 100%;
+	border-radius: 10px;
+	margin-top: 6px;
+	background-color: #e3e8f0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bs-card {
+	border: 1px solid #dde3ec;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 8px;
+	background: #f7f9fc;
+}
+.bs-card-thumb {
+	width: 100%;
+	height: 150px;
+	border-radius: 6px;
+	margin-bottom: 6px;
+	background-color: #e3e8f0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bs-card-title {
+	font-weight: bold;
+	font-size: 15px;
+}
+.bs-card-desc {
+	color: #556;
+	font-size: 13px;
+	margin-top: 3px;
+}
+.bs-card-yt {
+	border-color: #c4302b;
+}
+.bs-card-metube {
+	color: #c4302b;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 6px;
+}
+.bs-card-open {
+	color: #0a7aff;
+	font-size: 13px;
+	margin-top: 6px;
+}
+.bs-quote {
+	border: 1px solid #dde3ec;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 8px;
+	background: #f7f9fc;
+	font-size: 14px;
+	line-height: 20px;
+}
+.bs-quote .bs-img {
+	width: 360px;
+}
+.bs-video-badge {
+	display: inline-block;
+	margin: 8px;
+	padding: 3px 8px;
+	background: rgba(0,0,0,0.6);
+	color: #fff;
+	font-size: 13px;
+	border-radius: 4px;
+}
+
+/* fullscreen video player */
+.bs-videolayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1000;
+}
+.bs-video-close {
+	z-index: 1001;
+}
+.bs-video-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.bs-videobox {
+	width: 100%;
+	height: 100%;
+}
+.bs-video-el {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* action row */
+.bs-post-actions {
+	margin-top: 10px;
+}
+.bs-act {
+	color: #667;
+	font-size: 15px;
+	margin-right: 26px;
+	padding: 4px 2px;
+}
+.bs-act.bs-on {
+	color: #0a7aff;
+	font-weight: bold;
+}
+
+/* ---- search / explore ---- */
+
+.bs-search-bar {
+	background: #15202b;
+	padding: 8px 12px;
+}
+.bs-search-input {
+	margin-right: 8px;
+}
+.bs-mode {
+	margin-left: 6px;
+}
+.bs-actor-bio {
+	color: #556;
+	font-size: 14px;
+	line-height: 19px;
+	margin-top: 3px;
+}
+
+/* ---- sub-bar (feed header) ---- */
+
+.bs-subbar {
+	background: #0a7aff;
+	padding: 8px 12px;
+}
+.bs-subbar-title {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.bs-feed-icon {
+	border-radius: 10px;
+}
+
+/* ---- notifications ---- */
+
+.bs-notif {
+	background: #fff;
+	border-bottom: 1px solid #dde3ec;
+	padding: 12px 14px;
+}
+.bs-notif-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	margin-right: 10px;
+	background-color: #ccd3dd;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bs-notif-reason {
+	color: #445;
+	font-size: 15px;
+}
+.bs-notif-body {
+	color: #556;
+	font-size: 14px;
+	line-height: 19px;
+	margin-top: 4px;
+}
+
+/* ---- profile ---- */
+
+.bs-prof-banner {
+	height: 130px;
+	background-color: #0a7aff;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bs-prof-head {
+	background: #fff;
+	border-bottom: 1px solid #dde3ec;
+	padding: 12px 16px 14px;
+}
+.bs-prof-avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	margin-top: -52px;
+	border: 3px solid #fff;
+	background-color: #ccd3dd;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bs-prof-follow {
+	min-width: 110px;
+	margin-top: 10px;
+}
+.bs-prof-name {
+	font-size: 22px;
+	font-weight: bold;
+	color: #11131a;
+	margin-top: 6px;
+}
+.bs-prof-handle {
+	color: #667;
+	font-size: 15px;
+}
+.bs-prof-bio {
+	font-size: 15px;
+	line-height: 21px;
+	color: #223;
+	margin-top: 8px;
+}
+.bs-prof-counts {
+	color: #556;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+/* ---- chat ---- */
+
+.bs-unread {
+	color: #11131a;
+	font-weight: bold;
+}
+.bs-chat-compose {
+	background: #e8edf4;
+	padding: 8px 12px;
+	border-top: 1px solid #ccd3dd;
+}
+.bs-chat-compose .enyo-button {
+	margin-left: 8px;
+}
+.bs-msgrow {
+	padding: 3px 14px;
+}
+.bs-msg-mine {
+	text-align: right;
+}
+.bs-bubble {
+	display: inline-block;
+	max-width: 70%;
+	padding: 8px 12px;
+	border-radius: 14px;
+	font-size: 16px;
+	line-height: 21px;
+	text-align: left;
+	word-wrap: break-word;
+}
+.bs-bubble-mine {
+	background: #0a7aff;
+	color: #fff;
+}
+.bs-bubble-them {
+	background: #fff;
+	color: #11131a;
+	border: 1px solid #dde3ec;
+}
+
+/* ---- login ---- */
+
+.bs-login {
+	background: #f0f3f8;
+	height: 100%;
+}
+.bs-login-box {
+	max-width: 440px;
+	margin: 40px auto;
+	padding: 0 24px;
+}
+.bs-login-title {
+	font-size: 34px;
+	font-weight: bold;
+	color: #0a7aff;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.bs-login-help {
+	color: #556;
+	font-size: 14px;
+	line-height: 19px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.bs-login-label {
+	font-size: 13px;
+	color: #556;
+	margin: 14px 0 4px;
+}
+.bs-login-input {
+	width: 100%;
+}
+.bs-login-problem {
+	color: #c0392b;
+	font-size: 14px;
+	margin-top: 12px;
+}
+.bs-login-button {
+	margin-top: 20px;
+	width: 100%;
+}
+
+/* ---- compose ---- */
+
+.bs-compose {
+	height: 100%;
+	background: #f0f3f8;
+}
+.bs-compose-bar {
+	background: #0a7aff;
+	padding: 10px 14px;
+}
+.bs-compose-title {
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+}
+.bs-compose-replyto {
+	color: #556;
+	font-size: 15px;
+	padding: 10px 14px 0;
+}
+.bs-compose-text {
+	margin: 12px 14px;
+	font-size: 18px;
+	line-height: 24px;
+	border: 1px solid #ccd3dd;
+	border-radius: 8px;
+	padding: 10px;
+	background: #fff;
+}
+.bs-compose-count {
+	color: #889;
+	font-size: 15px;
+	padding: 0 14px 14px;
+	text-align: right;
+}
+.bs-compose-count.bs-over {
+	color: #c0392b;
+	font-weight: bold;
+}
+

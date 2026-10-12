@@ -1,0 +1,18 @@
+enyo.depends(
+	"stylesheets/app.css",
+	"source/Util.js",
+	"source/Api.js",
+	"source/Login.js",
+	"source/Post.js",
+	"source/Feed.js",
+	"source/Notifications.js",
+	"source/Profile.js",
+	"source/Explore.js",
+	"source/Feeds.js",
+	"source/Lists.js",
+	"source/Chat.js",
+	"source/Thread.js",
+	"source/Saved.js",
+	"source/Compose.js",
+	"source/App.js"
+);
